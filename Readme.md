@@ -22,6 +22,10 @@ Execute o comando npm install (ou npm i para a versão curta) para instalar as d
 
 4. Após isso, ainda no terminal do Visual Studio Code, rode os testes do cypress em modo headless por esse comando:
 
-`npx cypress run --headless`
+Frontend:
+`npx cypress run --headless --spec "cypress/e2e/frontend/**/*.cy.js"`
+
+API:
+`npx cypress run --headless --spec "cypress/e2e/api/**/*.cy.js"`
 
 ![alt text](image.png)
