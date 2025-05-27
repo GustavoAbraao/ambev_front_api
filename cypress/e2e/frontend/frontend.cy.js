@@ -36,4 +36,9 @@ describe('Testes funcionais Frontend', () => {
       cy.loginComSucesso(email, senha);
       cy.verificarLoginComSucesso();
   });
+
+  afterEach(function () {
+    const testName = this.currentTest.title.replace(/ /g, '_');
+    cy.screenshot(`screenshot-${testName}`);
+  });
 });
